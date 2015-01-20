@@ -39,6 +39,7 @@ RUN         chmod +x ./run
 # Cleans up APT when done.
 RUN         apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+RUN	    mkdir /session
 ADD         .rtorrent.rc /root/.rtorrent.rc
 
 EXPOSE 5000
